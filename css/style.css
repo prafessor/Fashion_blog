@@ -307,3 +307,12 @@ template {
 [hidden] {
   display: none;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-size: 16px;
+}
