@@ -1,2 +1,9 @@
-@use "../presets" as *;
+@use "../../presets" as *;
+
+.header {
+  min-height: 100vh;
+  padding-top: 100px;
+  
+}
+
 

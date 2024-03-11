@@ -1,0 +1,33 @@
+@use "../../presets" as *;
+
+.header-navbar {
+
+  &__list {
+    display: flex;
+    gap: 34px;
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: $color-dark;
+
+    &--active {
+      color: $color-accent;
+    }
+  }
+}
+.header-navbar__list {
+}
+.header-navbar__item {
+}
+.header-navbar__link {
+}
+.header-navbar__link--active {
+}
