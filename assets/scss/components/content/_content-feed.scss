@@ -1,0 +1,13 @@
+@use "../../presets" as *;
+@use "../../common" as *;
+
+.content-feed {
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 370px);
+    grid-template-rows:  411px 411px 411px 591px 411px 411px;
+    grid-template-areas: "first second" "third forth" "fifth sixth" "seventh seventh" "eighth nigth" "tenth eleventh";
+    gap: 30px;
+  }
+}

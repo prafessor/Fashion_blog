@@ -1,0 +1,13 @@
+@use "../../presets" as *;
+
+.content {
+
+  &__container {
+    width: $container-size;
+    margin: 60px auto;
+
+    display: flex;
+    justify-content: space-between;
+  }
+}
+

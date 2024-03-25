@@ -1,0 +1,131 @@
+@use "../../presets" as *;
+
+.content-widget {
+
+  &--mt-15px {
+    margin-top: -15px;
+  }
+  &__title {
+    width: 270px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: $font-main;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border: 1px solid $color-gray-line;
+
+    &--mb {
+      margin-bottom: 7px;
+    }
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  &__card {
+    margin-bottom: 30px;
+
+    &--pb {
+      padding-bottom: 5px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__btn {
+    width: 270px;
+    height: 40px;
+    line-height: 37px;
+    text-align: center;
+    border-top: 1px solid $color-gray-line;
+
+    a {
+      font-family: $font-main;
+      font-size: 0.75rem;
+      color: $color-accent;
+      text-transform: uppercase;
+      text-decoration: none;
+
+    }
+  }
+}
+.widget {
+  &-category {
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      height: 48px;
+      line-height: 50px;
+      border-bottom: 1px solid $color-gray-line;
+      font-family: $font-main;
+      font-size: 0.875rem;
+      color: $color-gray-dark;
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+      }
+      span {
+        display: block;
+        margin-right: 1px;
+      }
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
+  &-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+
+    &__item {
+
+      a {
+        width: 88px;
+        height: 88px;
+        background-color: $color-gray-light;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding: 14px 0;
+        text-decoration: none;
+
+      }
+      span {
+        font-family: $font-subtext;
+        font-size: 0.75rem;
+        color: $color-gray2;
+        display: block;
+        margin-top: 2px;
+      }
+    }
+  }
+  &-tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &__item {
+      display: block;
+
+      a {
+        display: block;
+        padding: 7px 15px;
+        background-color: $color-gray-light;
+
+        text-decoration: none;
+        font-family: $font-main;
+        font-size: 0.875rem;
+        color: $color-gray-dark;
+      }
+    }
+  }
+}

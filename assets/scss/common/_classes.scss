@@ -1,15 +1,171 @@
 @use "../presets" as *;
 
 .card {
+  // width: 370px;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.06);
 
   &__img {
   }
-  .card__supertext {
+  &__category {
+    margin: 9px 58px 4px;
+
+    a {
+      font-family: $font-subtext;
+      font-size: 0.75rem;
+      color: $color-accent;
+      // line-height: 40px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
   }
-  .card__title {
+  &__title {
+    margin: 4px 58px;
+
+    a {
+      font-family: $font-main;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: $color-dark;
+      text-decoration: none;
+    }
+
+    &--widget {
+      margin: 5px 0;
+      padding: 0 20px;
+      line-height: 25px;
+
+      a {
+        font-size: 1.125rem;
+      }
+    }
   }
-  .card__subtext {
+  &__subtext {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 11px 58px;
+
+    &-item {
+      display: block;
+      font-family: $font-main;
+      font-size: 0.75rem;
+      color: $color-gray-dark;
+
+      &--accent {
+        color: $color-gray;
+      }
+    }
+    &--widget {
+      margin: 10px 0;
+      padding: 0 20px;
+    }
   }
-  .card__subtext-item {
+  &__description {
+    font-family: $font-subtext;
+    font-size: 0.875rem;
+    color: $color-gray-dark;
+
+    &--widget {
+      padding: 0 20px;
+      margin: 15px 0;
+      line-height: 24px;
+    }
   }
+  &__author-name {
+    font-family: $font-main;
+    font-weight: 700;
+    color: $color-dark;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  &__author-subtitle {
+    font-family: $font-main;
+    font-style: italic;
+    font-size: 0.875rem;
+    color: $color-gray;
+  }
+  &--first {
+    grid-area: first;
+  }
+  &--second {
+    grid-area: second;
+  }
+  &--third {
+    grid-area: third;
+  }
+  &--forth {
+    grid-area: forth;
+  }
+  &--fifth {
+    grid-area: fifth;
+  }
+  &--sixth {
+    grid-area: sixth;
+  }
+  &--seventh {
+    grid-area: seventh;
+    text-align: left;
+    margin: 30px 0 0;
+
+    .card__category {
+      margin-top: 20px;
+      margin-left: 30px;
+    }
+    .card__title {
+      margin-left: 30px;
+    }
+    .card__subtext {
+      justify-content: flex-start;
+      margin-top: 13px;
+      margin-left: 30px;
+    }
+    .card__description {
+      line-height: 24px;
+      margin: 15px 143px 0 30px;
+    }
+  }
+  &--eighth {
+    grid-area: eighth;
+  }
+  &--nigth {
+    grid-area: nigth;
+  }
+  &--tenth {
+    grid-area: tenth;
+  }
+  &--eleventh {
+    grid-area: eleventh;
+  }
+}
+.icon-social {
+  background-repeat: no-repeat;
+  background-position: 50% 17px;
+}
+.fb-icon {
+  background-image: url(../assets/img/facebook-icon.svg);
+}
+.pinterest-icon {
+  background-image: url(../assets/img/pinterest-icon.svg);
+}
+.vimeo-icon {
+  background-image: url(../assets/img/vimeo-icon.svg);
+}
+.dribbble-icon {
+  background-image: url(../assets/img/dribbble-icon.svg);
+}
+.twitter-icon {
+  background-image: url(../assets/img/twitter-icon.svg);
+}
+.behance-icon {
+  background-image: url(../assets/img/behance-icon.svg);
+}
+.inst-icon {
+  background-image: url(../assets/img/instagram-icon.svg);
+}
+.youtube-icon {
+  background-image: url(../assets/img/youtube-icon.svg);
+}
+.google-icon {
+  background-image: url(../assets/img/google-icon.svg);
 }
