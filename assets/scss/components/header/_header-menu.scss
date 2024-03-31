@@ -6,6 +6,7 @@
   height: 100px;
   width: 100%;
   background-color: $color-white;
+  z-index: 50;
 }
 .header-menu__container {
   width: min(100% - $gap-x8, 1760px);

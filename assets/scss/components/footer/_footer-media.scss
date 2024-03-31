@@ -1,0 +1,32 @@
+@use "../../presets" as *;
+
+.footer-media {
+
+  &__list {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 4px 0 40px;
+  }
+  &__item {
+    list-style: none;
+
+  }
+  &__link {
+    display: block;
+    width: 34px;
+    height: 34px;
+    border: 1px solid $color-gray-line;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &:hover {
+      border: none;
+      background-color: $color-accent;
+      color: $color-white;
+      transition: 0.5s;
+    }
+  }
+}

@@ -308,6 +308,49 @@ template {
   display: none;
 }
 
+.logo__link {
+  position: relative;
+  color: #171717;
+  font-size: 1.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  text-decoration: none;
+}
+.logo__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 128px;
+  height: 5px;
+  background-color: #c9a96e;
+  opacity: 0.35;
+  transform: translateY(-8px);
+  z-index: -2;
+}
+
+.navbar__list {
+  display: flex;
+  gap: 34px;
+}
+.navbar__item {
+  list-style-type: none;
+}
+.navbar__link {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+  color: #171717;
+  transition: 0.3s;
+}
+.navbar__link:hover {
+  color: #c9a96e;
+}
+
 .card {
   text-align: center;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.06);
@@ -321,6 +364,11 @@ template {
   color: #c9a96e;
   text-transform: uppercase;
   text-decoration: none;
+  transition: 0.3s;
+}
+.card__category a:hover {
+  text-decoration: underline;
+  opacity: 0.3;
 }
 .card__title {
   margin: 4px 58px;
@@ -331,6 +379,10 @@ template {
   font-weight: 400;
   color: #171717;
   text-decoration: none;
+  transition: 0.5s;
+}
+.card__title a:hover {
+  color: #c9a96e;
 }
 .card__title--widget {
   margin: 5px 0;
@@ -475,6 +527,10 @@ template {
   background-image: url(../assets/img/google-icon.svg);
 }
 
+.br-tp {
+  border-top: 1px solid #e5e5e5;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -554,6 +610,7 @@ body {
   height: 100px;
   width: 100%;
   background-color: #ffffff;
+  z-index: 50;
 }
 
 .header-menu__container {
@@ -565,47 +622,9 @@ body {
   align-items: center;
 }
 
-.header-logo__link {
-  position: relative;
-  color: #171717;
-  font-size: 1.5625rem;
-  font-weight: 700;
-  letter-spacing: 0.15rem;
-  text-decoration: none;
-}
-.header-logo__link::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 128px;
-  height: 5px;
-  background-color: #c9a96e;
-  opacity: 0.35;
-  transform: translateY(-8px);
-  z-index: -2;
-}
-
-.header-navbar__list {
-  display: flex;
-  gap: 34px;
-}
-.header-navbar__item {
-  list-style-type: none;
-}
-.header-navbar__link {
-  text-decoration: none;
-  font-family: "PT Serif", serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  color: #171717;
-}
-.header-navbar__link--active {
-  color: #c9a96e;
-}
-
 .content__container {
   width: 1170px;
-  margin: 60px auto;
+  margin: 60px auto 0;
   display: flex;
   justify-content: space-between;
 }
@@ -739,11 +758,18 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 .content-widget__btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
   font-family: "PT Serif", serif;
   font-size: 0.75rem;
   color: #c9a96e;
   text-transform: uppercase;
   text-decoration: none;
+  transition: 0.5s;
+}
+.content-widget__btn a:hover {
+  opacity: 0.5;
 }
 
 .widget-category__item {
@@ -755,6 +781,7 @@ body {
   font-family: "PT Serif", serif;
   font-size: 0.875rem;
   color: #666666;
+  transition: 0.5s;
 }
 .widget-category__item a {
   display: block;
@@ -767,6 +794,9 @@ body {
 }
 .widget-category__item:last-of-type {
   border: none;
+}
+.widget-category__item:hover {
+  color: #c9a96e;
 }
 .widget-social {
   display: flex;
@@ -783,6 +813,13 @@ body {
   flex-direction: column;
   padding: 14px 0;
   text-decoration: none;
+  transition: 0.5s;
+}
+.widget-social__item a:hover {
+  background-color: #c9a96e;
+}
+.widget-social__item a:hover span {
+  color: #666666;
 }
 .widget-social__item span {
   font-family: "PT Sans", sans-serif;
@@ -807,4 +844,143 @@ body {
   font-family: "PT Serif", serif;
   font-size: 0.875rem;
   color: #666666;
+  transition: 0.5s;
+}
+.widget-tag__item a:hover {
+  background-color: #c9a96e;
+}
+
+.footer-container {
+  width: 1170px;
+  margin-inline: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-navbar {
+  margin-top: 34px;
+}
+.footer-navbar__list {
+  padding: 0;
+}
+
+.footer-bottom {
+  height: 110px;
+}
+
+.footer-copyright {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #666666;
+  margin-top: 30px;
+}
+.footer-copyright::after {
+  position: absolute;
+  right: 0;
+  content: "Created by Oleh Milyo";
+}
+
+.footer-fb-icon {
+  background-image: url(../assets/img/facebook-footer-icon.svg);
+  transition: 0.5s;
+}
+.footer-fb-icon:hover {
+  background-image: url(../assets/img/facebook-footer-icon-hover.svg);
+}
+
+.footer-twitter-icon {
+  background-image: url(../assets/img/twitter-footer-icon.svg);
+  transition: 0.5s;
+}
+.footer-twitter-icon:hover {
+  background-image: url(../assets/img/twitter-footer-icon-hover.svg);
+}
+
+.footer-pinterest-icon {
+  background-image: url(../assets/img/pinterest-footer-icon.svg);
+  transition: 0.5s;
+}
+.footer-pinterest-icon:hover {
+  background-image: url(../assets/img/pinterest-footer-icon-hover.svg);
+}
+
+.footer-google-icon {
+  background-image: url(../assets/img/google-footer-icon.svg);
+  transition: 0.5s;
+}
+.footer-google-icon:hover {
+  background-image: url(../assets/img/google-footer-icon-hover.svg);
+}
+
+.footer-behance-icon {
+  background-image: url(../assets/img/behance-footer-icon.svg);
+  transition: 0.5s;
+}
+.footer-behance-icon:hover {
+  background-image: url(../assets/img/behance-footer-icon-hover.svg);
+}
+
+.footer-inst-icon {
+  background-image: url(../assets/img/instagram-footer-icon.svg);
+  transition: 0.5s;
+}
+.footer-inst-icon:hover {
+  background-image: url(../assets/img/instagram-footer-icon-hover.svg);
+}
+
+.instagram__title {
+  text-align: center;
+  font-family: "PT Serif", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #171717;
+  margin-top: 21px;
+}
+.instagram__wrap {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+  margin-top: 42px;
+  margin-bottom: 98px;
+}
+.instagram__item {
+  width: calc((100% - 100px) / 6);
+}
+.instagram__item a {
+  transition: 0.3s;
+}
+.instagram__item a:hover {
+  opacity: 0.86;
+}
+.instagram__item img {
+  width: 100%;
+}
+
+.footer-media__list {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 4px 0 40px;
+}
+.footer-media__item {
+  list-style: none;
+}
+.footer-media__link {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.footer-media__link:hover {
+  border: none;
+  background-color: #c9a96e;
+  color: #ffffff;
+  transition: 0.5s;
 }
